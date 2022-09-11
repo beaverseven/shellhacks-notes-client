@@ -2,8 +2,9 @@ import React, { useEffect, useState } from "react";
 import { omit, update } from "lodash";
 import NotesTable from "./NotesTable";
 import { getNotes } from "./Api";
-import Select from 'react-select';
-import { MenuItem, InputLabel,FormControl } from '@mui/material';
+import Select, {components} from 'react-select';
+import './index.css';
+import { TextField } from "@mui/material";
 
 export default function HomePage() {
   const [notes, setNotes] = useState([]);
@@ -45,29 +46,34 @@ export default function HomePage() {
     {value : "CSCI 335", label: "CSCI 335"}
   ]
 
+  //Helper Function
+
+  
+
 
   
 
   return (
-    <div>
-      <input
-        type="text"
-        onChange={(e) => {
-          const value = e.target.value;
-          const updatedParams = value
-            ? {
-                ...queryParams,
-                notes: value,
-              }
-            : omit(queryParams, "notes"); //Instead of omitting, we should add it to the options.
+    <>
 
-          setQueryParams(updatedParams);
-        }}
-      />
+    <div class = "header">
+      <p class = "logo"> NFF</p>
+      <button class = "button"> + </button>
+        
+    </div>
+    <div class = "body">
+
+      <h1 class = "text"> Welcome To NoteFinder Free! To start, search up notes on a particular topic (Ex. Trees), and feel free to search by your school if need be!</h1>
+      
 
       {/* dropdown school filter */}
 
-      <Select label = "School" options = {SchoolOptions} 
+      <div class = "Scroll">
+
+      
+
+      <Select class = "schoolScroll" label = "School" options = {SchoolOptions}
+        placeholder = "School" 
         onChange = {(selectedOption) => {
           const value = selectedOption.value;
           const updatedParams = value
@@ -85,8 +91,11 @@ export default function HomePage() {
     
       {/* dropdown subject filter */}
 
-      <Select label = "Subject" options = {SubjectOptions} 
-        onChange = {(selectedOption) => {
+      <Select 
+      placeholder = "Subject"
+      label = "Subject" 
+      options = {SubjectOptions}
+      onChange = {(selectedOption) => {
           const value = selectedOption.value;
           const updatedParams = value
             ? {
@@ -109,6 +118,7 @@ export default function HomePage() {
       {/* some course filter */}
 
       <Select label = "Course" options = {CourseOptions} 
+        placeholder = "Course"
         onChange = {(selectedOption) => {
           const value = selectedOption.value;
           const updatedParams = value
@@ -126,9 +136,33 @@ export default function HomePage() {
 
 
 
+      <TextField class = "searchBar"
+              fullWidth
+              placeholder="Notes"
+              type="text"
+              onChange={(e) => {
+                const value = e.target.value;
+                const updatedParams = value
+                  ? {
+                      ...queryParams,
+                      notes: value,
+                    }
+                  : omit(queryParams, "notes"); //Instead of omitting, we should add it to the options.
+
+                setQueryParams(updatedParams);
+              }}
+            />
+
+            </div>
 
 
+
+
+
+
+             
       {!isLoading && <NotesTable rows={notes} />}
     </div>
+    </>
   );
 }
