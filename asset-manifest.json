@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/static/css/main.3693b3cb.chunk.css",
-    "main.js": "/static/js/main.4dbb2a4c.chunk.js",
-    "main.js.map": "/static/js/main.4dbb2a4c.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.0a9e9d62.js",
-    "runtime-main.js.map": "/static/js/runtime-main.0a9e9d62.js.map",
-    "static/js/2.493df976.chunk.js": "/static/js/2.493df976.chunk.js",
-    "static/js/2.493df976.chunk.js.map": "/static/js/2.493df976.chunk.js.map",
-    "index.html": "/index.html",
-    "static/css/main.3693b3cb.chunk.css.map": "/static/css/main.3693b3cb.chunk.css.map",
-    "static/js/2.493df976.chunk.js.LICENSE.txt": "/static/js/2.493df976.chunk.js.LICENSE.txt"
+    "main.css": "/shellhacks-notes-client/static/css/main.3693b3cb.chunk.css",
+    "main.js": "/shellhacks-notes-client/static/js/main.4dbb2a4c.chunk.js",
+    "main.js.map": "/shellhacks-notes-client/static/js/main.4dbb2a4c.chunk.js.map",
+    "runtime-main.js": "/shellhacks-notes-client/static/js/runtime-main.5ea26e56.js",
+    "runtime-main.js.map": "/shellhacks-notes-client/static/js/runtime-main.5ea26e56.js.map",
+    "static/js/2.493df976.chunk.js": "/shellhacks-notes-client/static/js/2.493df976.chunk.js",
+    "static/js/2.493df976.chunk.js.map": "/shellhacks-notes-client/static/js/2.493df976.chunk.js.map",
+    "index.html": "/shellhacks-notes-client/index.html",
+    "static/css/main.3693b3cb.chunk.css.map": "/shellhacks-notes-client/static/css/main.3693b3cb.chunk.css.map",
+    "static/js/2.493df976.chunk.js.LICENSE.txt": "/shellhacks-notes-client/static/js/2.493df976.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.0a9e9d62.js",
+    "static/js/runtime-main.5ea26e56.js",
     "static/js/2.493df976.chunk.js",
     "static/css/main.3693b3cb.chunk.css",
     "static/js/main.4dbb2a4c.chunk.js"
