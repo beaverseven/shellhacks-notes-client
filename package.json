@@ -2,7 +2,9 @@
   "name": "client",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://beaverseven.github.io",
   "dependencies": {
+    "-": "^0.0.1",
     "@emotion/react": "^11.10.4",
     "@emotion/styled": "^11.10.4",
     "@mui/material": "^5.10.4",
@@ -11,6 +13,7 @@
     "@testing-library/user-event": "^13.5.0",
     "axios": "^0.27.2",
     "fs": "^0.0.1-security",
+    "gh-pages": "^4.0.0",
     "lodash": "^4.17.21",
     "pdf-parse": "^1.1.1",
     "pdfjs-dist": "^2.16.105",
@@ -20,13 +23,16 @@
     "react-router-dom": "^6.3.0",
     "react-scripts": "^4.0.3",
     "react-select": "^5.4.0",
+    "save-dev": "^0.0.1-security",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
